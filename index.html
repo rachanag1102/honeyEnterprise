@@ -9,309 +9,336 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* ================= RESET ================= */
+/* ===== RESET ===== */
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-    font-family:'Poppins',sans-serif;
-    background:#f6f8fb;
-    color:#222;
-    line-height:1.6;
+  font-family:'Poppins',sans-serif;
+  background:#f4f7fb;
+  color:#222;
 }
 
-/* ================= HEADER ================= */
+/* ===== HEADER ===== */
 header{
-    position:sticky;
-    top:0;
-    background:#fff;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
-    z-index:1000;
+  position:sticky;
+  top:0;
+  background:#fff;
+  box-shadow:0 4px 18px rgba(0,0,0,.08);
+  z-index:1000;
 }
 .nav{
-    max-width:1200px;
-    margin:auto;
-    padding:14px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+  max-width:1200px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 .logo{
-    font-size:22px;
-    font-weight:700;
-    color:#0a7a43;
+  font-size:22px;
+  font-weight:700;
+  color:#0a7a43;
 }
-.nav-links a{
-    margin-left:20px;
-    text-decoration:none;
-    color:#333;
-    font-weight:500;
+.nav a{
+  text-decoration:none;
+  margin-left:22px;
+  color:#333;
+  font-weight:500;
 }
 
-/* ================= HERO ================= */
+/* ===== HERO ===== */
 .hero{
-    background:linear-gradient(135deg,#0a7a43,#16a34a);
-    color:#fff;
-    padding:70px 20px;
-    text-align:center;
+  background:linear-gradient(135deg,#0a7a43,#16a34a);
+  color:#fff;
+  text-align:center;
+  padding:80px 20px;
 }
 .hero h1{font-size:42px;margin-bottom:10px}
-.hero p{opacity:.95}
+.hero p{opacity:.95;margin-bottom:20px}
 
-/* ================= CONTAINER ================= */
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:50px 20px;
-}
-
-/* ================= CARD ================= */
-.card{
-    background:#fff;
-    border-radius:16px;
-    padding:25px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    margin-bottom:30px;
-}
-
-/* ================= BUTTON ================= */
+/* ===== BUTTON ===== */
 .btn{
-    display:inline-block;
-    background:#0a7a43;
-    color:#fff;
-    padding:12px 22px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:600;
-    margin:6px 6px 0 0;
-    transition:.3s;
+  display:inline-block;
+  background:#fff;
+  color:#0a7a43;
+  padding:12px 24px;
+  border-radius:10px;
+  font-weight:600;
+  text-decoration:none;
+  margin:6px;
+  transition:.3s;
 }
-.btn:hover{background:#086537}
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
 
-/* ================= SERVICES ================= */
+/* ===== CONTAINER ===== */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:50px 20px;
+}
+
+/* ===== CARD ===== */
+.card{
+  background:#fff;
+  border-radius:18px;
+  padding:28px;
+  margin-bottom:30px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+/* ===== CONTACT INFO ===== */
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+.contact-item{
+  background:#f8fafc;
+  padding:18px;
+  border-radius:12px;
+}
+
+/* ===== SERVICES ===== */
 .services-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
 }
 .service{
-    padding:22px;
-    border-radius:14px;
-    background:#f8fafc;
-    text-align:center;
-    transition:.35s;
-    border:1px solid #eee;
+  background:#f8fafc;
+  padding:22px;
+  border-radius:14px;
+  text-align:center;
+  transition:.35s;
+  border:1px solid #eee;
+  font-weight:500;
 }
 .service:hover{
-    transform:translateY(-6px);
-    box-shadow:0 14px 30px rgba(0,0,0,.12);
+  transform:translateY(-6px);
+  box-shadow:0 14px 30px rgba(0,0,0,.12);
 }
 
-/* ================= GALLERY ================= */
+/* ===== GALLERY ===== */
 .gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:14px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:14px;
 }
 .gallery-grid img{
-    width:100%;
-    border-radius:14px;
-    cursor:pointer;
-    transition:.35s;
+  width:100%;
+  border-radius:14px;
+  cursor:pointer;
+  transition:.35s;
 }
 .gallery-grid img:hover{transform:scale(1.05)}
 
-/* LIGHTBOX */
+/* ===== LIGHTBOX ===== */
 .lightbox{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.9);
-    display:none;
-    align-items:center;
-    justify-content:center;
-    z-index:2000;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:2000;
 }
 .lightbox img{
-    max-width:90%;
-    max-height:85%;
-    border-radius:10px;
+  max-width:90%;
+  max-height:85%;
+  border-radius:12px;
 }
 
-/* ================= FORM ================= */
+/* ===== FORM ===== */
 input,textarea,button{
-    width:100%;
-    padding:14px;
-    margin:10px 0;
-    border-radius:10px;
-    border:1px solid #ccc;
-    font-family:'Poppins';
+  width:100%;
+  padding:14px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid #ccc;
+  font-family:'Poppins';
 }
 button{
-    background:#0a7a43;
-    color:#fff;
-    font-weight:600;
-    border:none;
-    cursor:pointer;
+  background:#0a7a43;
+  color:#fff;
+  font-weight:600;
+  border:none;
+  cursor:pointer;
 }
 button:hover{background:#086537}
 
-/* ================= WHATSAPP FLOAT ================= */
+/* ===== FLOATING WHATSAPP ===== */
 .whatsapp{
-    position:fixed;
-    bottom:90px;
-    right:20px;
-    width:58px;
-    height:58px;
-    background:#25d366;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#fff;
-    font-size:28px;
-    box-shadow:0 8px 25px rgba(0,0,0,.25);
-    z-index:999;
+  position:fixed;
+  bottom:90px;
+  right:20px;
+  width:60px;
+  height:60px;
+  background:#25d366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:28px;
+  box-shadow:0 8px 25px rgba(0,0,0,.25);
+  z-index:999;
 }
 
-/* ================= FOOTER ================= */
+/* ===== FOOTER ===== */
 footer{
-    background:#0f172a;
-    color:#fff;
-    text-align:center;
-    padding:25px 20px;
+  background:#0f172a;
+  color:#fff;
+  text-align:center;
+  padding:25px 20px;
 }
 
-/* ================= ANIMATION ================= */
+/* ===== ANIMATION ===== */
 .fade{
-    opacity:0;
-    transform:translateY(40px);
-    transition:all .9s ease;
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .9s ease;
 }
 .fade.show{
-    opacity:1;
-    transform:translateY(0);
+  opacity:1;
+  transform:translateY(0);
 }
 
-/* ================= MOBILE ================= */
+/* ===== MOBILE ===== */
 @media(max-width:768px){
 .hero h1{font-size:30px}
-.nav-links{display:none}
+.nav a{display:none}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ===== HEADER ===== -->
 <header>
-<div class="nav">
-<div class="logo">Namo Wellness</div>
-<div class="nav-links">
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
+  <div class="nav">
+    <div class="logo">Honey Enterprise</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
 </header>
 
-<!-- HERO -->
+<!-- ===== HERO ===== -->
 <section class="hero">
-<h1>Honey Enterprise</h1>
-<p>Medical Slimming • Skin • Hair • Laser • Cosmetology</p>
-<a class="btn" href="tel:+919998246733">Call Now</a>
-<a class="btn" href="https://api.whatsapp.com/send?phone=919998246733" target="_blank">WhatsApp</a>
+  <h1>Honey Enterprise</h1>
+  <p>Medical Slimming • Skin • Hair • Laser • Cosmetology</p>
+
+  <a class="btn" href="tel:+919998246733">📞 Call Now</a>
+  <a class="btn" href="https://api.whatsapp.com/send?phone=919998246733" target="_blank">💬 WhatsApp</a>
+  <a class="btn" href="https://share.google/p0LQNVavCgqorxOTZ" target="_blank">📍 Get Direction</a>
 </section>
 
 <div class="container">
 
-<!-- ABOUT -->
+<!-- ===== CONTACT INFO ===== -->
+<div class="card fade">
+  <h2>Contact Information</h2>
+  <div class="contact-grid">
+    <div class="contact-item"><b>📞 Phone</b><br>9998246733</div>
+    <div class="contact-item"><b>📧 Email</b><br>honeyenterprise2021@gmail.com</div>
+    <div class="contact-item"><b>📍 Address</b><br>Adajan, Surat</div>
+  </div>
+</div>
+
+<!-- ===== ABOUT ===== -->
 <div id="about" class="card fade">
-<h2>About Us</h2>
-<p>
-Welcome to Honey Enterprise! We offer advanced weight loss,
-skin and hair treatments using modern technology and expert care.
-Our mission is to build a healthier and confident community through
-world-class wellness solutions.
-</p>
+  <h2>About Us</h2>
+  <p>
+    Welcome to Honey Enterprise! We provide advanced weight loss,
+    skin, hair and laser treatments using modern technology and expert care.
+    Our mission is to build a healthier and confident community through
+    world-class wellness solutions.
+  </p>
 </div>
 
-<!-- SERVICES -->
+<!-- ===== SERVICES ===== -->
 <div id="services" class="card fade">
-<h2>Our Services</h2>
-<div class="services-grid">
-<div class="service">Slimming Treatment</div>
-<div class="service">Medical Slimming</div>
-<div class="service">Coolsculpting</div>
-<div class="service">Skin Treatment</div>
-<div class="service">Hydra Facial</div>
-<div class="service">Carbon Laser</div>
-<div class="service">Laser Hair Reduction</div>
-<div class="service">Hair Treatment</div>
-</div>
+  <h2>Our Services</h2>
+  <div class="services-grid">
+    <div class="service">Slimming Treatment</div>
+    <div class="service">Medical Slimming</div>
+    <div class="service">Coolsculpting</div>
+    <div class="service">Skin Treatment</div>
+    <div class="service">Hydra Facial</div>
+    <div class="service">Carbon Laser</div>
+    <div class="service">Laser Hair Reduction</div>
+    <div class="service">Hair Treatment</div>
+  </div>
 </div>
 
-<!-- GALLERY -->
+<!-- ===== GALLERY ===== -->
 <div id="gallery" class="card fade">
-<h2>Gallery</h2>
-<div class="gallery-grid">
-<img src="images/gallery-1.jpg">
-<img src="images/gallery-2.jpg">
-<img src="images/gallery-3.jpg">
-<img src="images/gallery-4.jpg">
-</div>
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="images/gallery-1.jpg">
+    <img src="images/gallery-2.jpg">
+    <img src="images/gallery-3.jpg">
+    <img src="images/gallery-4.jpg">
+  </div>
 </div>
 
-<!-- CONTACT -->
+<!-- ===== CONTACT FORM ===== -->
 <div id="contact" class="card fade">
-<h2>Enquiry Form</h2>
-<form onsubmit="submitForm(event)">
-<input type="text" placeholder="Your Name" required>
-<input type="tel" placeholder="Mobile Number" required>
-<input type="email" placeholder="Email Address" required>
-<textarea placeholder="Your Message"></textarea>
-<button type="submit">Submit</button>
-</form>
+  <h2>Enquiry Form</h2>
+  <form onsubmit="submitForm(event)">
+    <input type="text" placeholder="Your Name" required>
+    <input type="tel" placeholder="Mobile Number" required>
+    <input type="email" placeholder="Email Address" required>
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Submit</button>
+  </form>
 </div>
 
 </div>
 
-<!-- LIGHTBOX -->
+<!-- ===== LIGHTBOX ===== -->
 <div class="lightbox" id="lightbox">
-<img src="" id="lightbox-img">
+  <img id="lightbox-img">
 </div>
 
-<!-- WHATSAPP FLOAT -->
+<!-- ===== FLOATING WHATSAPP ===== -->
 <a class="whatsapp" href="https://api.whatsapp.com/send?phone=919998246733" target="_blank">💬</a>
 
-<!-- FOOTER -->
+<!-- ===== FOOTER ===== -->
 <footer>
-© 2025 Honey Enterprise
+  © 2025 Honey Enterprise
 </footer>
 
 <script>
 // ===== SCROLL ANIMATION =====
 const observer=new IntersectionObserver(entries=>{
-entries.forEach(e=>{
-if(e.isIntersecting)e.target.classList.add('show');
-});
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add('show');
+  });
 },{threshold:.15});
 document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
 
-// ===== GALLERY LIGHTBOX =====
+// ===== LIGHTBOX =====
 const lightbox=document.getElementById('lightbox');
 const lightboxImg=document.getElementById('lightbox-img');
 document.querySelectorAll('.gallery-grid img').forEach(img=>{
-img.onclick=()=>{
-lightbox.style.display='flex';
-lightboxImg.src=img.src;
-};
+  img.onclick=()=>{
+    lightbox.style.display='flex';
+    lightboxImg.src=img.src;
+  };
 });
 lightbox.onclick=()=>lightbox.style.display='none';
 
 // ===== FORM =====
 function submitForm(e){
-e.preventDefault();
-alert("Form submitted! Connect backend to receive enquiries.");
+  e.preventDefault();
+  alert("Form submitted! Connect backend to receive enquiries.");
 }
 </script>
 
