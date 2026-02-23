@@ -288,11 +288,11 @@ footer{
 <div id="contact" class="card fade">
   <h2>Enquiry Form</h2>
   <form onsubmit="submitForm(event)">
-    <input type="text" placeholder="Your Name" required>
-    <input type="tel" placeholder="Mobile Number" required>
-    <input type="email" placeholder="Email Address" required>
-    <textarea placeholder="Your Message"></textarea>
-    <button type="submit">Submit</button>
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="tel" id="phone" placeholder="Mobile Number" required>
+    <input type="email" id="email" placeholder="Email Address" required>
+    <textarea id="message" placeholder="Your Message"></textarea>
+    <button type="submit">Submit Enquiry on Whatsapp</button>
   </form>
 </div>
 
@@ -334,12 +334,28 @@ lightbox.onclick=()=>lightbox.style.display='none';
 // ===== FORM =====
 function submitForm(e){
   e.preventDefault();
-  alert("Form submitted! Connect backend to receive enquiries.");
+   const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const whatsappNumber = "9998246733"; 
+
+    const fullMessage = 
+        "New Enquiry from Website:%0A%0A" +
+        "Name: " + name + "%0A" +
+        "Phone: " + phone + "%0A" +
+        "Message: " + message;
+
+    const whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + fullMessage;
+
+    window.open(whatsappURL, "_blank");
 }
+  
 </script>
 
 </body>
 </html>
+
 
 
 
